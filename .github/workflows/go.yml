@@ -41,22 +41,5 @@ jobs:
       with:
         name: apk
         path: |
-          GAME/app/build/outputs/apk/release
-          output/keystore
-          GAME/app/*.obb
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: scripts
-        path: |
-          code
-          build.sh
-          scripts
-    - name: Archive Game&SDK Code
-      uses: actions/upload-artifact@v2
-      with:
-        name: game&sdk
-        path: |
-          GAME
-          SDK
-          !GAME/app/*.obb
+          app/build/outputs/apk/release
+          
