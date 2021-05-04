@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resproguard>
+  <!--defaut property to set  -->
+  <issue id="property">
+    <!--whether use 7zip to repackage the signed apk, you must install the 7z command line version in window -->
+    <!--sudo apt-get install p7zip-full in linux -->
+    <!--and you must write the sign data fist, and i found that if we use linux, we can get a better result -->
+    <seventzip value="false"/>
+    <!--the sign data file name in your apk, default must be META-INF-->
+    <!--generally, you do not need to change it if you dont change the meta file name in your apk-->
+    <metaname value="META-INF"/>
+    <!--if keep root, res/drawable will be kept, it won't be changed to such as r/s-->
+    <keeproot value="false"/>
+	<!--filter duplicate resource files-->
+	<mergeDuplicatedRes value="true"/>
+  </issue>
+
+  <!--whitelist, some resource id you can not proguard, such as getIdentifier-->
+  <!--isactive, whether to use whitelist, you can set false to close it simply-->
+  <issue id="whitelist" isactive="true">
+    <!--you must write the full package name, such as com.tencent.mm.R -->
+    <!--for some reason, we should keep our icon better-->
+    <!--and it support *, ?, such as com.tencent.mm.R.drawable.emoji_*, com.tencent.mm.R.drawable.emoji_?-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.mipmap*.ic_launcher"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.string.game*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_dialog*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.hw_button*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.qg_float*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.bg_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.hw_dialog_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.layout.qg_view_*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.hw_*"/>-->
+
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.hw_account_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.hw_bg_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.hw_btn_*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.hw_checkbox*"/>-->
+
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.hw_frame_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.hw_inputbox_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.hw_loading*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.hw_login_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.hw_share_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.hw_thirdlogin_*"/>-->
+
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.layout.qg*"/>-->
+
+
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.id.*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.layout.*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.layout.abc*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.layout.browser*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.layout.com*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.layout.custom*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.layout.hw*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.layout.linesdk_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.layout.messenger_*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.layout.notification*"/>-->
+
+
+
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.layout.redeem_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.layout.select*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.layout.support_*"/>-->
+
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.*"/>-->
+
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.btn_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.com_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.common_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.dialog_*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.abc_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.edit_*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.et_*"/>-->
+
+
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.messenger_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.notification_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.old_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.picture_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.qg_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.qk_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.tooltip_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.ucrop_*"/>-->
+
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.abc_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.account_*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.hw_*"/>-->
+
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.bg_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.com_*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.common_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.email_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.facebook_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.google_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.googleg_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.guest_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.hi94"/>-->
+
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.kr_close"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.ks_tip"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.line_icon"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.login_logo"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.messenger_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.naver_login"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.notification_*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.ic_launcher"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.notify_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.picture_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.tomato_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.ucrop_*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.youke_*"/>-->
+
+
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.abc*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.com*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.common*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.picture*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.switch*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.ucrop*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.accent*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.androidx*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.background*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.bright*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.browser*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.button*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.cardview*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.color*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw__item*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_account*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_activity_bg*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_alert_content_textColor*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_base_dialog*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_black*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_button*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_clause*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_darkBlue*"/>-->
+
+
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_divider*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_dullBlack*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_float*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_frame*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_google*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_header*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_inputBox*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_item*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_line*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_login*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_share*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.hw_white*"/>-->
+
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.qg*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.dim*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.primary*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.edit*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.error*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.foreground*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.highlighted*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.jp_login_bg*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.kr_login_style*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.material*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.notification*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.old*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.ripple*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.secondary*"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.tooltip*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.style.*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.layout.*"/>-->
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.layout.qk_cs_activity_chat"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.drawable.qk_cs_contacts_click_hot"/>-->
+<!--    <path value="com.loreofsummonedmonsters.andde.R.anim.*"/>-->
+
+
+<!--    <path value="com.loreofsummonedmonsters.andde.R.color.*"/>-->
+<!--    <path value="<your_package_name>.R.drawable.bg_*"/>-->
+<!--    <path value="<your_package_name>.R.drawable.qg_float_main*"/>-->
+<!--    <path value="<your_package_name>.R.style.*UM*"/>-->
+<!--    <path value="<your_package_name>.R.style.umeng*"/>-->
+<!--    <path value="<your_package_name>.R.id.umeng*"/>-->
+<!--    <path value="<your_package_name>.R.string.UM*"/>-->
+<!--    <path value="<your_package_name>.R.string.tb_*"/>-->
+<!--    <path value="<your_package_name>.R.layout.tb_*"/>-->
+    <!--<path value="<your_package_name>.R.color.tb_*"/>-->
+  </issue>
+
+  <!--keepmapping, sometimes if we need to support incremental upgrade, we should keep the old mapping-->
+  <!--isactive, whether to use keepmapping, you can set false to close it simply-->
+  <!--if you use -mapping to set keepmapping property in cammand line, these setting will be overlayed-->
+  <issue id="keepmapping" isactive="false">
+    <!--the old mapping path, in window use \, in linux use /, and the default path is the running location-->
+    <path value="{your_mapping_path}"/>
+  </issue>
+
+  <!--compress, if you want to compress the file, the name is relative path, such as resources.arsc, res/drawable-hdpi/welcome.png-->
+  <!--what can you compress? generally, if your resources.arsc less than 1m, you can compress it. and i think compress .png, .jpg is ok-->
+  <!--isactive, whether to use compress, you can set false to close it simply-->
+  <issue id="compress" isactive="false">
+    <!--you must use / separation, and it support *, ?, such as *.png, *.jpg, res/drawable-hdpi/welcome_?.png-->
+    <path value="*.png"/>
+    <path value="*.jpg"/>
+    <path value="*.jpeg"/>
+    <path value="*.gif"/>
+    <path value="resources.arsc"/>
+  </issue>
+
+  <!--sign, if you want to sign the apk, and if you want to use 7zip, you must fill in the following data-->
+  <!--isactive, whether to use sign, you can set false to close it simply-->
+  <!--if you use -signature to set sign property in cammand line, these setting will be overlayed-->
+  <issue id="sign" isactive="true">
+    <!--the signature file path, in window use \, in linux use /, and the default path is the running location-->
+    <path value="googlepay.keystore"/>
+    <!--storepass-->
+    <storepass value="googlepay"/>
+    <!--keypass-->
+    <keypass value="googlepay"/>
+    <!--alias-->
+    <alias value="googlepay"/>
+  </issue>
+
+</resproguard>
