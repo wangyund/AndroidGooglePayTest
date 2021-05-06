@@ -16,8 +16,8 @@ cd ${pwd}
 ./gradlew assembleRelease
 
 # 打包后的处理
-#chmod +x ${rootPwd}/scripts/07_final_deal.sh
-#${rootPwd}/scripts/07_final_deal.sh
+chmod +x ${rootPwd}/scripts/07_final_deal.sh
+${rootPwd}/scripts/07_final_deal.sh
 
 
 
