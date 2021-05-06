@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "GooglePayTest"
+rootProject.name = "AndroidGooglePayTest"
