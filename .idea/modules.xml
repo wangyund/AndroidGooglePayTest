@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GooglePayTest.iml" filepath="$PROJECT_DIR$/.idea/modules/GooglePayTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GooglePayTest.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GooglePayTest.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AndroidGooglePayTest.iml" filepath="$PROJECT_DIR$/.idea/modules/AndroidGooglePayTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidGooglePayTest.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidGooglePayTest.app.iml" />
     </modules>
   </component>
 </project>

@@ -4,14 +4,14 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
 
     defaultConfig {
         applicationId "com.googlepay.encryptionconfusiontest"
-        minSdkVersion 16
-        targetSdkVersion 30
-        versionCode 1
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 2
         versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
